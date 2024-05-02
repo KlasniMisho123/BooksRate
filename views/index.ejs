@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books Review</title>
+  <link rel="stylesheet" href="/styles/index.css">
+
+</head>
+<body>
+  <header class="header-div">
+    <div class="left-header">
+      <img class="logo-img" src="/assets/logo1.png">
+      <span class="title-top">Book Scale</span>
+    </div>
+    <div class="nav-bar">
+      <span>Home</span>
+      <span>Profile</span>
+      <span>Random Books</span>
+    </div>
+  </header>
+  <section class="content-section">
+    <div class="top-section">
+      <div class=item-container> <img class="books-img" src="/assets/books.png"> <span>BooksRate</span></div>
+      <div class="input-div-flex">
+        <form class="input-div" method="GET" action="/">
+          <div class="pre-input">All</div> <input type="text" placeholder="Add Books You've Read" id="bookNameInput" name="bookName"> <div> <button class="submit-btn" type="submit"><img class="search-icon" src="/assets/search-icon.png"></button> </div><div class="after-input"></div>
+          </div>
+        </form>
+      
+      <div><img class="profile-img" src="/assets/profile.png"></div>
+    </div>
+    <div class="info-section">
+      <div class="welcome-libery"><span> Welcome To BooksRate</span></div>
+      <div class="info-item-flex">
+        <div class="info-item">
+           <img src="/assets/rateings.png">
+            <span class="item-title">Check/Rate Books</span>
+            <span class="item-text">Explore, rate, and discover new books. Your opinion matters!</span>
+        </div>
+        <div class="info-item">
+          <img src="/assets/chosebooks.jpg">
+           <span class="item-title">Choose Books To Read</span>
+           <span class="item-text">Browse through a vast selection of books and discover your next favorite read!</span>
+       </div>
+       <div class="info-item">
+        <img src="/assets/bookcollection.webp">
+         <span class="item-title">Monitor Your Book Collection</span>
+         <span class="item-text">Keep track of your books with ease and organize your collection effortlessly!</span>
+     </div>
+      </div>
+    </div>
+    <div class="main-section">
+      <div class=books-title><span>That You've Read: </span></div>
+      <div class="content-main">
+        <% if (locals.books && locals.books.length > 0) { %>
+          <% locals.books.forEach(book => { %>
+              <form method="POST" action="/">
+                  <div class="book-item" name="<%= book.id %>">
+                      <input type="hidden" name="bookId" value="<%= book.id %>">
+                      <img class="book-cover" src="<%= book.cover %>">
+                      <span class="book-title"><%= book.title %> </span>
+                      <span class="book-author">By <%= book.author %></span>
+                      <span class="published-in"><%= book.published %></span>
+                      <button class="delete-btn" type="submit"> DELETE </button>
+                  </div>
+              </form>
+          <% }); %>
+      <% } %>
+      
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+          <span class="footer-text">© 2024 Book Web. All rights reserved.</span>
+      </div>
+  </footer>
+  
+  </section>
+  
+</body>
+</html>

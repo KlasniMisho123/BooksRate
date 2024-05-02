@@ -1,0 +1,312 @@
+body {
+    margin: 0;
+    background-color: #333;
+}
+
+.header-div {
+    display: flex;
+    align-items: center;
+    flex: 1fr 1fr;
+    gap: 60%;
+    justify-content:space-around;
+}
+
+.nav-bar {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-bar * {
+    font-weight: bold;
+}
+
+.nav-bar *:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: #f44b0e;
+}
+
+.header-div {
+    height: 50px;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.logo-img {
+    height: 50px;
+    width: 70px;
+    object-fit: cover;
+}
+.left-header {
+    display: flex;
+    align-items: center;
+}
+
+.left-header *:hover {
+    cursor: pointer;
+    transform: scale(1.1); 
+}
+
+.title-top {
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px; 
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    width: 70%;
+    background-color: white;
+    margin-top: 3%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1px solid gainsboro;
+    border-radius: 8px;
+}
+
+.books-img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: lightcoral;
+    border-radius: 8px 8px 0px 0px;
+}
+
+.profile-img {
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+}
+
+.profile-img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.input-div-flex {
+    display: flex;
+    align-items: center;
+}
+
+.input-div {
+    display: flex;
+    align-items: center;
+}
+.input-div * {
+    transition: all 0.3s ease;
+}
+
+.input-div *:hover {
+    transform: scale(1.05);
+}
+
+
+input {
+    height: 20px;
+    text-align: center;
+    border-left-width: 0.5px;
+    border-right-width: 0.5px;
+    border: black 1.6px solid;
+}
+
+.item-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.item-container *:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.welcome-libery {
+    font-family: Arial, sans-serif; 
+    font-size: 16px; 
+    color: red;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.welcome-libery span {
+    font-weight: bold;
+}
+
+
+.pre-input{
+    border: 1px solid black;
+    height: 22px;
+    border: 1.6px solid black;
+    background-color: rgb(240, 240, 240);
+    border-right: none;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.search-icon {
+    height: 16px;
+    width: 30px;
+    object-fit: contain;
+    
+}
+
+.submit-btn {
+    border: 1.6px solid black;
+    border-left: none;
+    border-radius: 0px 8px 8px 0px;
+}
+
+.info-section {
+    border-bottom: 1px black solid;
+    border-style: dashed;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    gap: 30px;
+}
+
+.info-item-flex {
+    display: flex;
+    gap:  20px;
+    justify-content: center;
+}
+
+.info-item {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    border: #f44b0e 1px solid; 
+    border-radius: 8px;
+    width: 25%;
+    height: 120px;
+}
+.info-item:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.info-item > img {
+    grid-row: span 3;
+    justify-self: center; 
+    align-self: center; 
+    height: 90%;
+    object-fit: cover;
+}
+
+.item-title {
+    font-size: 18px;
+    color: #333;
+    align-self: center;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.item-text {
+    font-size: 12px;
+    color: #666;
+    font-family: Helvetica, sans-serif;
+}
+
+.item-text {
+    font-size: 12px;
+    word-wrap: break-word;
+    overflow: hidden;
+}
+
+.books-title {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: Arial, sans-serif; 
+}
+
+.content-main {
+    min-height: 600px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.book-item {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 250px;
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 40px;
+    column-gap: 10px;
+}
+
+.book-cover {
+    grid-row: span 100;
+    justify-self: center; 
+    align-self: center; 
+    height: 170px;
+    width: 100px;
+    object-fit: cover;
+    border: 1px solid black;
+}
+
+.book-title{
+    font-family: Arial, sans-serif;   
+    text-align: center;
+    font-weight: bold;
+}
+
+.book-author {
+    font-family: Helvetica, sans-serif;
+    text-align: center;
+}
+.published-in {
+    text-align: center;
+}
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 14px;
+}
+
+.delete-btn {
+    height: 50px;
+    width: 110px;
+    background-color: red;
+    border: none;
+    border-radius: 32px;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+.delete-btn:hover {
+    background-color: darkred;
+    color: white;
+    border-color: darkred;
+    cursor: pointer;
+}
